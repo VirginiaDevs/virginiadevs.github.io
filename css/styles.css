@@ -1,0 +1,407 @@
+/*!
+ * Start Bootstrap - Resume v4.0.0-beta.2 (https://startbootstrap.com/template-overviews/resume)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-resume/blob/master/LICENSE)
+ */
+ :root {
+  --turquesa: #438086;
+  --turquesa-claro: #69999E;
+  --turquesa-claro2: #A1C0C3;
+  --oscuro: #495057;
+}
+
+body {
+  font-family: 'Open Sans', serif;
+  padding-top: 54px;
+  color: #868e96; 
+  background-color: #f5f5f5; }
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 0;
+    padding-left: 17rem; } }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Saira Extra Condensed', serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #343a40; }
+
+h1 {
+  font-size: 6rem;
+  line-height: 5.5rem; }
+
+h2 {
+  font-size: 3.5rem; }
+
+.subheading {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: 'Saira Extra Condensed', serif;
+  font-size: 1.35rem; }
+
+.list-social-icons a {
+  color: var(--oscuro); }
+  .list-social-icons a:hover {
+    color: var(--turquesa); }
+  .list-social-icons a .fa-lg {
+    font-size: 1.75rem; }
+
+.list-icons {
+  font-size: 3rem; }
+
+#sideNav .navbar-nav .nav-item .nav-link {
+  font-weight: 600;
+  text-transform: uppercase; }
+
+@media (min-width: 992px) {
+  #sideNav {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 17rem;
+    height: 100vh; }
+    #sideNav .navbar-brand {
+      display: flex;
+      margin: auto auto 0;
+      padding: 0.5rem; }
+      #sideNav .navbar-brand .img-profile {
+        max-width: 10rem;
+        max-height: 10rem;
+        border: 0.5rem solid rgba(255, 255, 255, 0.2); }
+    #sideNav .navbar-collapse {
+      display: flex;
+      align-items: flex-start;
+      flex-grow: 0;
+      width: 100%;
+      margin-bottom: auto; }
+      #sideNav .navbar-collapse .navbar-nav {
+        flex-direction: column;
+        width: 100%; }
+        #sideNav .navbar-collapse .navbar-nav .nav-item {
+          display: block; }
+          #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
+            display: block; } }
+
+section.resume-section {
+  border-bottom: 1px solid #dee2e6;
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important; }
+  section.resume-section .resume-item .resume-date {
+    min-width: none; }
+
+@media (min-width: 768px) {
+  section.resume-section {
+    min-height: 50vh; }
+    section.resume-section .resume-item .resume-date {
+      min-width: 18rem; } 
+      .descripcion {
+        max-width: 70%; }
+      .contacto .btn {
+        width: 3.5rem; } 
+      #proyectos .card-wrap {
+        flex: 0 0 50%;
+        display: flex;
+        padding: 10px;
+      } }
+
+@media (min-width: 992px) {
+  section.resume-section {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important; } 
+    section.resume-section {
+      min-height: 100vh; } 
+      .descripcion {
+        max-width: 50%; }
+      .contacto .btn {
+        width: 4.5rem; } }
+
+.bg-primary {
+  background-color: var(--turquesa) !important; }
+
+.text-primary {
+  color: var(--turquesa) !important; font-weight: 600; }
+
+a {
+  color: var(--turquesa); }
+  a:hover, a:focus, a:active {
+    color: var(--oscuro); }
+
+/* ---------- SOBRE MÍ ---------- */
+#sobre-mi {
+  background-image: url(../img/bg_2.jpg); 
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+@media (max-width: 768px) {
+  #sobre-mi {
+    background-position: left center; }
+  .contacto .col-1 {
+    margin: 1.2rem 1rem 0 .3rem; } }
+
+.contacto .input-group-text {
+  border: none; 
+  background-color: transparent; }
+
+.contacto .form-control {
+  background-color: rgba(0, 0, 0, 0.04); 
+  border: 1px solid #868e96; 
+  border-radius: 8px; }
+
+.contacto .btn {
+  background-color: var(--turquesa); 
+  color: white; }
+
+.contacto #tooltip-copiar, .contacto #tooltip-enviar {
+  visibility: hidden;
+  width: 100px;
+  background-color: var(--oscuro);
+  color: white;
+  text-align: center;
+  font-size: 13px;
+  border-radius: 8px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -48px;
+  opacity: 0;
+  transition: opacity 0.3s; }
+
+.contacto #tooltip-copiar::after, .contacto #tooltip-enviar::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--oscuro) transparent transparent transparent; }
+
+#copy-btn:hover #tooltip-copiar, #send-btn:hover #tooltip-enviar {
+  visibility: visible;
+  opacity: 1; }
+
+.list-social-icons .list-inline-item {
+  margin-right: 1rem; }
+
+.list-social-icons .list-inline-item .btn {
+  background-color: var(--oscuro); 
+  color: white; 
+  font-size: .8rem; 
+  border-radius: 8px; 
+  margin-top: -.4rem; }
+
+.list-social-icons .list-inline-item .btn:hover {
+  background-color: var(--turquesa); }
+
+/* ---------- PROYECTOS ---------- */
+#proyectos .resume-item .card {
+  border-color: #868e96; 
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21); }
+  
+#proyectos .resume-item .card .img-proyecto {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 80%;
+  width: 80%;
+  object-fit: contain; 
+  transform: scale(1);
+  transition: .5s ease-in-out; }
+
+#proyectos .resume-item .card .img-proyecto:hover {
+  transform: scale(1.1); }
+
+#proyectos .resume-item .card .img-logo {
+  max-height: 20px; }
+
+/* ---------- EXPERIENCIA ---------- */
+#exp-box {
+  overflow: hidden;
+  position: relative;
+  padding: 60px 0; }
+
+  /* Línea temporal */
+#exp-box::before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  background: #cfcdcd;
+  position: absolute;
+  top: 0;
+  left: 50%; }
+
+  /* Elementos impares */
+#exp-box .exp {
+  width: 50%;
+  clear: both;
+  position: relative; }
+
+  /* Rombo inicial */
+#exp-box .exp::before {
+  display: block;
+  clear: both; }
+
+  /* Rombo marca */
+#exp-box .exp-icon {
+  width: 24px;
+  height: 24px;
+  background: white;
+  border: 1px solid #cfcdcd;
+  position: absolute;
+  top: 17px;
+  right: -13px;
+  z-index: 1;
+  transform: rotate(45deg); }
+
+  /* Cuadro de elemento */
+#exp-box .exp-content {
+  width: 85%;
+  padding: 18px 30px;
+  background: white;
+  text-align: right;
+  float: left;
+  border: 1px solid transparent;
+  position: relative;
+  transition: all 0.3s ease 0s; }
+
+  /* Rombo elemento */
+#exp-box .exp-content::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: #cfcdcd;
+  border: 1px solid #cfcdcd;
+  position: absolute;
+  top: 21px;
+  right: -7.3px;
+  transform: rotate(45deg);
+  transition: all 0.2s ease 0s; }
+
+  /* Línea que une rombo elemento con rombo marca */
+#exp-box .exp-content::after {
+  content: "";
+  width: 11%;
+  height: 1px;
+  background: #cfcdcd;
+  position: absolute;
+  top: 28px;
+  right: -14%; }
+
+#exp-box .date {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--turquesa);
+  margin: 0 0 8px;
+  transition: all 0.3s ease 0s; }
+
+#exp-box .title {
+  font-size: 18px;
+  color: #444;
+  margin-top: 0;
+  transition: all 0.3s ease 0s; }
+
+#exp-box .description {
+  font-size: 16px;
+  color: #777;
+  line-height: 28px;
+  margin-top: 8px; }
+
+  /* --- Primer elemento --- */
+#exp-box .exp:first-child::before {
+  content: "";
+  width: 11px;
+  height: 11px;
+  background: #cfcdcd;
+  box-sizing: content-box;
+  border: 5px solid white;
+  box-shadow: 0 0 0 2px #cfcdcd;
+  position: absolute;
+  top: -54px;
+  right: -11px;
+  transform: rotate(45deg); }
+
+  /* Rombo final */
+#exp-box .exp:last-child:nth-child(2n)::before {
+  right: auto;
+  left: -10px; }
+#exp-box .exp:last-child::before {
+  top: auto;
+  bottom: -54px; }
+#exp-box .exp:last-child::before {
+  content: "";
+  width: 11px;
+  height: 11px;
+  background: #cfcdcd;
+  box-sizing: content-box;
+  border: 5px solid #fff;
+  box-shadow: 0 0 0 2px #cfcdcd;
+  position: absolute;
+  right: -11px;
+  transform: rotate(45deg); }
+
+  /* Elementos pares */
+#exp-box .exp:nth-child(2n) {
+  float: right;
+  text-align: left; }
+
+  /* Rombo marca */
+#exp-box .exp:nth-child(2n) .exp-icon {
+  right: 0;
+  left: -12px; }
+
+  /* Cuadro de elemento */
+#exp-box .exp:nth-child(2n) .exp-content {
+  float: right;
+  text-align: left; }
+
+  /* Rombo elemento */
+#exp-box .exp:nth-child(2n) .exp-content::before {
+  left: -7.3px; }
+
+  /* Línea que une rombo elemento con rombo marca */
+#exp-box .exp:nth-child(2n) .exp-content::after {
+  left: -14%; } 
+
+  /* Móvil */
+@media only screen and (max-width: 767px) {
+  #exp-box {
+    padding-left: 20px; }
+  #exp-box::before {
+    left: 20px; }
+  #exp-box .exp {
+    text-align: left; 
+    width: 100%; }
+  #exp-box .exp, #exp-box .exp-content {
+    float: right;
+    padding: 5px;
+    text-align: left; }
+  #exp-box .exp:first-child::before {
+    right: auto;
+    left: -10px; }
+  #exp-box .exp-icon {
+    right: 0;
+    left: -12px; }
+  #exp-box .exp-content {
+    float: right;
+    padding: 5px;
+    text-align: left; }
+  #exp-box .exp-content::before, #exp-box .exp:nth-child(2n) .exp-content::before {
+    left: -15px; 
+    top: 17px; }
+  #exp-box .exp-content::after {
+    left: -14%; 
+    top: 23px; } }
